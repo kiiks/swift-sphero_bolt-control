@@ -16,6 +16,49 @@
 		0EBA7417275788230092662F /* sphero_control_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7416275788230092662F /* sphero_control_appTests.swift */; };
 		0EBA7421275788230092662F /* sphero_control_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7420275788230092662F /* sphero_control_appUITests.swift */; };
 		0EBA7423275788230092662F /* sphero_control_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7422275788230092662F /* sphero_control_appUITestsLaunchTests.swift */; };
+		0EBA743B27579C3D0092662F /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA743827579C170092662F /* Starscream.framework */; };
+		0EBA743C27579C3D0092662F /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA743827579C170092662F /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EBA743F27579D320092662F /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA743E27579D320092662F /* WebSocketManager.swift */; };
+		0EBA74492757AB560092662F /* SpheroMovmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74482757AB560092662F /* SpheroMovmentManager.swift */; };
+		0EBA744B2757AB950092662F /* BasicMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA744A2757AB950092662F /* BasicMove.swift */; };
+		0EBA744D2757ABBA0092662F /* GenericMovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA744C2757ABBA0092662F /* GenericMovementManager.swift */; };
+		0EBA744F2757AC060092662F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA744E2757AC060092662F /* Helper.swift */; };
+		0EBA747F2757B2BA0092662F /* SharedToyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74512757B2BA0092662F /* SharedToyBox.swift */; };
+		0EBA74802757B2BA0092662F /* SDKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74532757B2BA0092662F /* SDKUtils.swift */; };
+		0EBA74812757B2BA0092662F /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74562757B2BA0092662F /* Toy.swift */; };
+		0EBA74822757B2BA0092662F /* SensorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74572757B2BA0092662F /* SensorControl.swift */; };
+		0EBA74832757B2BA0092662F /* SPRKToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74592757B2BA0092662F /* SPRKToy.swift */; };
+		0EBA74842757B2BA0092662F /* SensorControlV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA745A2757B2BA0092662F /* SensorControlV1.swift */; };
+		0EBA74852757B2BA0092662F /* SpheroV1Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA745B2757B2BA0092662F /* SpheroV1Toy.swift */; };
+		0EBA74862757B2BA0092662F /* SpheroV1ToyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA745C2757B2BA0092662F /* SpheroV1ToyCore.swift */; };
+		0EBA74872757B2BA0092662F /* BB8Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA745D2757B2BA0092662F /* BB8Toy.swift */; };
+		0EBA74882757B2BA0092662F /* SensorControlV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA745F2757B2BA0092662F /* SensorControlV2.swift */; };
+		0EBA74892757B2BA0092662F /* BB9EToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74602757B2BA0092662F /* BB9EToy.swift */; };
+		0EBA748A2757B2BA0092662F /* SpheroV2Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74612757B2BA0092662F /* SpheroV2Toy.swift */; };
+		0EBA748B2757B2BA0092662F /* BoltToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74622757B2BA0092662F /* BoltToy.swift */; };
+		0EBA748C2757B2BA0092662F /* R2D2Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74632757B2BA0092662F /* R2D2Toy.swift */; };
+		0EBA748D2757B2BA0092662F /* SpheroV2ToyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74642757B2BA0092662F /* SpheroV2ToyCore.swift */; };
+		0EBA748E2757B2BA0092662F /* MiniToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74652757B2BA0092662F /* MiniToy.swift */; };
+		0EBA748F2757B2BA0092662F /* ToyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74662757B2BA0092662F /* ToyProtocols.swift */; };
+		0EBA74902757B2BA0092662F /* CBUUID+SpheroUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74672757B2BA0092662F /* CBUUID+SpheroUUIDs.swift */; };
+		0EBA74912757B2BA0092662F /* ToyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74692757B2BA0092662F /* ToyBox.swift */; };
+		0EBA74922757B2BA0092662F /* Color+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA746A2757B2BA0092662F /* Color+Utils.swift */; };
+		0EBA74932757B2BA0092662F /* SensorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA746C2757B2BA0092662F /* SensorUtils.swift */; };
+		0EBA74942757B2BA0092662F /* CommandOperationV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA746E2757B2BA0092662F /* CommandOperationV2.swift */; };
+		0EBA74952757B2BA0092662F /* CommandSequencerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA746F2757B2BA0092662F /* CommandSequencerV2.swift */; };
+		0EBA74962757B2BA0092662F /* CommandV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74702757B2BA0092662F /* CommandV2.swift */; };
+		0EBA74972757B2BA0092662F /* VersionsCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74722757B2BA0092662F /* VersionsCommandResponse.swift */; };
+		0EBA74982757B2BA0092662F /* ShouldActionCompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74732757B2BA0092662F /* ShouldActionCompleteResponse.swift */; };
+		0EBA74992757B2BA0092662F /* SensorCommandResponseV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74742757B2BA0092662F /* SensorCommandResponseV2.swift */; };
+		0EBA749A2757B2BA0092662F /* SensorCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74752757B2BA0092662F /* SensorCommandResponse.swift */; };
+		0EBA749B2757B2BA0092662F /* SensorMaskCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74762757B2BA0092662F /* SensorMaskCommandResponse.swift */; };
+		0EBA749C2757B2BA0092662F /* PowerStateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74772757B2BA0092662F /* PowerStateResponse.swift */; };
+		0EBA749D2757B2BA0092662F /* CollisionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA74782757B2BA0092662F /* CollisionData.swift */; };
+		0EBA749E2757B2BA0092662F /* CommandV1Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747A2757B2BA0092662F /* CommandV1Operation.swift */; };
+		0EBA749F2757B2BA0092662F /* CommandV1Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747B2757B2BA0092662F /* CommandV1Sequencer.swift */; };
+		0EBA74A02757B2BA0092662F /* CommandV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747C2757B2BA0092662F /* CommandV1.swift */; };
+		0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747D2757B2BA0092662F /* Double+Utils.swift */; };
+		0EBA74A22757B2BA0092662F /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747E2757B2BA0092662F /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +76,35 @@
 			remoteGlobalIDString = 0EBA73FB275788210092662F;
 			remoteInfo = sphero_control_app;
 		};
+		0EBA743727579C170092662F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EBA743227579C170092662F /* Starscream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33CCF0921F5DDC030099B092;
+			remoteInfo = Starscream;
+		};
+		0EBA743927579C170092662F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EBA743227579C170092662F /* Starscream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335FA2021F5DF71D00F6D2EC;
+			remoteInfo = "Starscream Tests";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0EBA743D27579C3D0092662F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0EBA743C27579C3D0092662F /* Starscream.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0EBA73FC275788220092662F /* sphero_control_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sphero_control_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +120,48 @@
 		0EBA741C275788230092662F /* sphero_control_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sphero_control_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBA7420275788230092662F /* sphero_control_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sphero_control_appUITests.swift; sourceTree = "<group>"; };
 		0EBA7422275788230092662F /* sphero_control_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sphero_control_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0EBA743227579C170092662F /* Starscream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Starscream.xcodeproj; path = "Starscream-master/Starscream.xcodeproj"; sourceTree = "<group>"; };
+		0EBA743E27579D320092662F /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		0EBA74482757AB560092662F /* SpheroMovmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpheroMovmentManager.swift; sourceTree = "<group>"; };
+		0EBA744A2757AB950092662F /* BasicMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMove.swift; sourceTree = "<group>"; };
+		0EBA744C2757ABBA0092662F /* GenericMovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMovementManager.swift; sourceTree = "<group>"; };
+		0EBA744E2757AC060092662F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		0EBA74512757B2BA0092662F /* SharedToyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedToyBox.swift; sourceTree = "<group>"; };
+		0EBA74532757B2BA0092662F /* SDKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKUtils.swift; sourceTree = "<group>"; };
+		0EBA74562757B2BA0092662F /* Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
+		0EBA74572757B2BA0092662F /* SensorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControl.swift; sourceTree = "<group>"; };
+		0EBA74592757B2BA0092662F /* SPRKToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRKToy.swift; sourceTree = "<group>"; };
+		0EBA745A2757B2BA0092662F /* SensorControlV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControlV1.swift; sourceTree = "<group>"; };
+		0EBA745B2757B2BA0092662F /* SpheroV1Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV1Toy.swift; sourceTree = "<group>"; };
+		0EBA745C2757B2BA0092662F /* SpheroV1ToyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV1ToyCore.swift; sourceTree = "<group>"; };
+		0EBA745D2757B2BA0092662F /* BB8Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BB8Toy.swift; sourceTree = "<group>"; };
+		0EBA745F2757B2BA0092662F /* SensorControlV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControlV2.swift; sourceTree = "<group>"; };
+		0EBA74602757B2BA0092662F /* BB9EToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BB9EToy.swift; sourceTree = "<group>"; };
+		0EBA74612757B2BA0092662F /* SpheroV2Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV2Toy.swift; sourceTree = "<group>"; };
+		0EBA74622757B2BA0092662F /* BoltToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoltToy.swift; sourceTree = "<group>"; };
+		0EBA74632757B2BA0092662F /* R2D2Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2D2Toy.swift; sourceTree = "<group>"; };
+		0EBA74642757B2BA0092662F /* SpheroV2ToyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV2ToyCore.swift; sourceTree = "<group>"; };
+		0EBA74652757B2BA0092662F /* MiniToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniToy.swift; sourceTree = "<group>"; };
+		0EBA74662757B2BA0092662F /* ToyProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyProtocols.swift; sourceTree = "<group>"; };
+		0EBA74672757B2BA0092662F /* CBUUID+SpheroUUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CBUUID+SpheroUUIDs.swift"; sourceTree = "<group>"; };
+		0EBA74692757B2BA0092662F /* ToyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyBox.swift; sourceTree = "<group>"; };
+		0EBA746A2757B2BA0092662F /* Color+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Utils.swift"; sourceTree = "<group>"; };
+		0EBA746C2757B2BA0092662F /* SensorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorUtils.swift; sourceTree = "<group>"; };
+		0EBA746E2757B2BA0092662F /* CommandOperationV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandOperationV2.swift; sourceTree = "<group>"; };
+		0EBA746F2757B2BA0092662F /* CommandSequencerV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandSequencerV2.swift; sourceTree = "<group>"; };
+		0EBA74702757B2BA0092662F /* CommandV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV2.swift; sourceTree = "<group>"; };
+		0EBA74722757B2BA0092662F /* VersionsCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionsCommandResponse.swift; sourceTree = "<group>"; };
+		0EBA74732757B2BA0092662F /* ShouldActionCompleteResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShouldActionCompleteResponse.swift; sourceTree = "<group>"; };
+		0EBA74742757B2BA0092662F /* SensorCommandResponseV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCommandResponseV2.swift; sourceTree = "<group>"; };
+		0EBA74752757B2BA0092662F /* SensorCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCommandResponse.swift; sourceTree = "<group>"; };
+		0EBA74762757B2BA0092662F /* SensorMaskCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorMaskCommandResponse.swift; sourceTree = "<group>"; };
+		0EBA74772757B2BA0092662F /* PowerStateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerStateResponse.swift; sourceTree = "<group>"; };
+		0EBA74782757B2BA0092662F /* CollisionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionData.swift; sourceTree = "<group>"; };
+		0EBA747A2757B2BA0092662F /* CommandV1Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1Operation.swift; sourceTree = "<group>"; };
+		0EBA747B2757B2BA0092662F /* CommandV1Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1Sequencer.swift; sourceTree = "<group>"; };
+		0EBA747C2757B2BA0092662F /* CommandV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1.swift; sourceTree = "<group>"; };
+		0EBA747D2757B2BA0092662F /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
+		0EBA747E2757B2BA0092662F /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBA743B27579C3D0092662F /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +193,12 @@
 		0EBA73F3275788210092662F = {
 			isa = PBXGroup;
 			children = (
+				0EBA74502757B2BA0092662F /* SpheroSDK */,
 				0EBA73FE275788220092662F /* sphero_control_app */,
 				0EBA7415275788230092662F /* sphero_control_appTests */,
 				0EBA741F275788230092662F /* sphero_control_appUITests */,
 				0EBA73FD275788220092662F /* Products */,
+				0EBA743127579C170092662F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +215,15 @@
 		0EBA73FE275788220092662F /* sphero_control_app */ = {
 			isa = PBXGroup;
 			children = (
+				0EBA74302757891F0092662F /* Services */,
+				0EBA742F2757890B0092662F /* Controllers */,
 				0EBA73FF275788220092662F /* AppDelegate.swift */,
 				0EBA7401275788220092662F /* SceneDelegate.swift */,
-				0EBA7403275788220092662F /* ViewController.swift */,
 				0EBA7405275788220092662F /* Main.storyboard */,
 				0EBA7408275788230092662F /* Assets.xcassets */,
 				0EBA740A275788230092662F /* LaunchScreen.storyboard */,
 				0EBA740D275788230092662F /* Info.plist */,
+				0EBA744E2757AC060092662F /* Helper.swift */,
 			);
 			path = sphero_control_app;
 			sourceTree = "<group>";
@@ -127,6 +245,166 @@
 			path = sphero_control_appUITests;
 			sourceTree = "<group>";
 		};
+		0EBA742F2757890B0092662F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA7403275788220092662F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0EBA74302757891F0092662F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA743E27579D320092662F /* WebSocketManager.swift */,
+				0EBA74482757AB560092662F /* SpheroMovmentManager.swift */,
+				0EBA744A2757AB950092662F /* BasicMove.swift */,
+				0EBA744C2757ABBA0092662F /* GenericMovementManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0EBA743127579C170092662F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA743227579C170092662F /* Starscream.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EBA743327579C170092662F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA743827579C170092662F /* Starscream.framework */,
+				0EBA743A27579C170092662F /* Starscream Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EBA74502757B2BA0092662F /* SpheroSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74512757B2BA0092662F /* SharedToyBox.swift */,
+				0EBA74522757B2BA0092662F /* SDK */,
+			);
+			name = SpheroSDK;
+			path = sphero_control_app/SpheroSDK;
+			sourceTree = "<group>";
+		};
+		0EBA74522757B2BA0092662F /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74532757B2BA0092662F /* SDKUtils.swift */,
+				0EBA74542757B2BA0092662F /* BLE */,
+				0EBA746A2757B2BA0092662F /* Color+Utils.swift */,
+				0EBA746B2757B2BA0092662F /* Commands */,
+				0EBA747D2757B2BA0092662F /* Double+Utils.swift */,
+				0EBA747E2757B2BA0092662F /* String+Utils.swift */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		0EBA74542757B2BA0092662F /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74552757B2BA0092662F /* Toy */,
+				0EBA74672757B2BA0092662F /* CBUUID+SpheroUUIDs.swift */,
+				0EBA74682757B2BA0092662F /* ToyBox */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		0EBA74552757B2BA0092662F /* Toy */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74562757B2BA0092662F /* Toy.swift */,
+				0EBA74572757B2BA0092662F /* SensorControl.swift */,
+				0EBA74582757B2BA0092662F /* V1Toys */,
+				0EBA745E2757B2BA0092662F /* V2Toys */,
+				0EBA74662757B2BA0092662F /* ToyProtocols.swift */,
+			);
+			path = Toy;
+			sourceTree = "<group>";
+		};
+		0EBA74582757B2BA0092662F /* V1Toys */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74592757B2BA0092662F /* SPRKToy.swift */,
+				0EBA745A2757B2BA0092662F /* SensorControlV1.swift */,
+				0EBA745B2757B2BA0092662F /* SpheroV1Toy.swift */,
+				0EBA745C2757B2BA0092662F /* SpheroV1ToyCore.swift */,
+				0EBA745D2757B2BA0092662F /* BB8Toy.swift */,
+			);
+			path = V1Toys;
+			sourceTree = "<group>";
+		};
+		0EBA745E2757B2BA0092662F /* V2Toys */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA745F2757B2BA0092662F /* SensorControlV2.swift */,
+				0EBA74602757B2BA0092662F /* BB9EToy.swift */,
+				0EBA74612757B2BA0092662F /* SpheroV2Toy.swift */,
+				0EBA74622757B2BA0092662F /* BoltToy.swift */,
+				0EBA74632757B2BA0092662F /* R2D2Toy.swift */,
+				0EBA74642757B2BA0092662F /* SpheroV2ToyCore.swift */,
+				0EBA74652757B2BA0092662F /* MiniToy.swift */,
+			);
+			path = V2Toys;
+			sourceTree = "<group>";
+		};
+		0EBA74682757B2BA0092662F /* ToyBox */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74692757B2BA0092662F /* ToyBox.swift */,
+			);
+			path = ToyBox;
+			sourceTree = "<group>";
+		};
+		0EBA746B2757B2BA0092662F /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA746C2757B2BA0092662F /* SensorUtils.swift */,
+				0EBA746D2757B2BA0092662F /* CommandV2 */,
+				0EBA74712757B2BA0092662F /* CommandResponses */,
+				0EBA74792757B2BA0092662F /* CommandV1 */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		0EBA746D2757B2BA0092662F /* CommandV2 */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA746E2757B2BA0092662F /* CommandOperationV2.swift */,
+				0EBA746F2757B2BA0092662F /* CommandSequencerV2.swift */,
+				0EBA74702757B2BA0092662F /* CommandV2.swift */,
+			);
+			path = CommandV2;
+			sourceTree = "<group>";
+		};
+		0EBA74712757B2BA0092662F /* CommandResponses */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74722757B2BA0092662F /* VersionsCommandResponse.swift */,
+				0EBA74732757B2BA0092662F /* ShouldActionCompleteResponse.swift */,
+				0EBA74742757B2BA0092662F /* SensorCommandResponseV2.swift */,
+				0EBA74752757B2BA0092662F /* SensorCommandResponse.swift */,
+				0EBA74762757B2BA0092662F /* SensorMaskCommandResponse.swift */,
+				0EBA74772757B2BA0092662F /* PowerStateResponse.swift */,
+				0EBA74782757B2BA0092662F /* CollisionData.swift */,
+			);
+			path = CommandResponses;
+			sourceTree = "<group>";
+		};
+		0EBA74792757B2BA0092662F /* CommandV1 */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA747A2757B2BA0092662F /* CommandV1Operation.swift */,
+				0EBA747B2757B2BA0092662F /* CommandV1Sequencer.swift */,
+				0EBA747C2757B2BA0092662F /* CommandV1.swift */,
+			);
+			path = CommandV1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +415,7 @@
 				0EBA73F8275788210092662F /* Sources */,
 				0EBA73F9275788210092662F /* Frameworks */,
 				0EBA73FA275788210092662F /* Resources */,
+				0EBA743D27579C3D0092662F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +496,12 @@
 			mainGroup = 0EBA73F3275788210092662F;
 			productRefGroup = 0EBA73FD275788220092662F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0EBA743327579C170092662F /* Products */;
+					ProjectRef = 0EBA743227579C170092662F /* Starscream.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0EBA73FB275788210092662F /* sphero_control_app */,
@@ -225,6 +510,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0EBA743827579C170092662F /* Starscream.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Starscream.framework;
+			remoteRef = 0EBA743727579C170092662F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0EBA743A27579C170092662F /* Starscream Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Starscream Tests.xctest";
+			remoteRef = 0EBA743927579C170092662F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0EBA73FA275788210092662F /* Resources */ = {
@@ -258,9 +560,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBA74A22757B2BA0092662F /* String+Utils.swift in Sources */,
+				0EBA74992757B2BA0092662F /* SensorCommandResponseV2.swift in Sources */,
+				0EBA748C2757B2BA0092662F /* R2D2Toy.swift in Sources */,
+				0EBA748B2757B2BA0092662F /* BoltToy.swift in Sources */,
+				0EBA74842757B2BA0092662F /* SensorControlV1.swift in Sources */,
 				0EBA7404275788220092662F /* ViewController.swift in Sources */,
+				0EBA74822757B2BA0092662F /* SensorControl.swift in Sources */,
+				0EBA74812757B2BA0092662F /* Toy.swift in Sources */,
+				0EBA744B2757AB950092662F /* BasicMove.swift in Sources */,
+				0EBA74A02757B2BA0092662F /* CommandV1.swift in Sources */,
+				0EBA74492757AB560092662F /* SpheroMovmentManager.swift in Sources */,
+				0EBA747F2757B2BA0092662F /* SharedToyBox.swift in Sources */,
+				0EBA74942757B2BA0092662F /* CommandOperationV2.swift in Sources */,
+				0EBA74932757B2BA0092662F /* SensorUtils.swift in Sources */,
+				0EBA748E2757B2BA0092662F /* MiniToy.swift in Sources */,
 				0EBA7400275788220092662F /* AppDelegate.swift in Sources */,
 				0EBA7402275788220092662F /* SceneDelegate.swift in Sources */,
+				0EBA74972757B2BA0092662F /* VersionsCommandResponse.swift in Sources */,
+				0EBA748A2757B2BA0092662F /* SpheroV2Toy.swift in Sources */,
+				0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */,
+				0EBA744D2757ABBA0092662F /* GenericMovementManager.swift in Sources */,
+				0EBA74852757B2BA0092662F /* SpheroV1Toy.swift in Sources */,
+				0EBA749D2757B2BA0092662F /* CollisionData.swift in Sources */,
+				0EBA74962757B2BA0092662F /* CommandV2.swift in Sources */,
+				0EBA748F2757B2BA0092662F /* ToyProtocols.swift in Sources */,
+				0EBA748D2757B2BA0092662F /* SpheroV2ToyCore.swift in Sources */,
+				0EBA749A2757B2BA0092662F /* SensorCommandResponse.swift in Sources */,
+				0EBA74882757B2BA0092662F /* SensorControlV2.swift in Sources */,
+				0EBA743F27579D320092662F /* WebSocketManager.swift in Sources */,
+				0EBA749E2757B2BA0092662F /* CommandV1Operation.swift in Sources */,
+				0EBA74892757B2BA0092662F /* BB9EToy.swift in Sources */,
+				0EBA74912757B2BA0092662F /* ToyBox.swift in Sources */,
+				0EBA74872757B2BA0092662F /* BB8Toy.swift in Sources */,
+				0EBA749B2757B2BA0092662F /* SensorMaskCommandResponse.swift in Sources */,
+				0EBA74902757B2BA0092662F /* CBUUID+SpheroUUIDs.swift in Sources */,
+				0EBA74802757B2BA0092662F /* SDKUtils.swift in Sources */,
+				0EBA74982757B2BA0092662F /* ShouldActionCompleteResponse.swift in Sources */,
+				0EBA749C2757B2BA0092662F /* PowerStateResponse.swift in Sources */,
+				0EBA74862757B2BA0092662F /* SpheroV1ToyCore.swift in Sources */,
+				0EBA744F2757AC060092662F /* Helper.swift in Sources */,
+				0EBA74952757B2BA0092662F /* CommandSequencerV2.swift in Sources */,
+				0EBA74832757B2BA0092662F /* SPRKToy.swift in Sources */,
+				0EBA749F2757B2BA0092662F /* CommandV1Sequencer.swift in Sources */,
+				0EBA74922757B2BA0092662F /* Color+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +780,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TYT8SVZSUY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sphero_control_app/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,13 +791,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.poo.sphero-control-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,8 +811,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TYT8SVZSUY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sphero_control_app/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,13 +822,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.poo.sphero-control-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
