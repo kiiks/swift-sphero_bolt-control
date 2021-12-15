@@ -189,6 +189,14 @@
                                     <action selector="stopSphero" destination="HcP-94-fvN" eventType="touchUpInside" id="bvP-VF-OMA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hk-ue-zDh">
+                                <rect key="frame" x="144.5" y="582.5" width="125.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pressure Action"/>
+                                <connections>
+                                    <action selector="onPressureActionBtn:" destination="HcP-94-fvN" eventType="touchUpInside" id="MpB-Nn-egB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dzv-nu-icn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,6 +211,8 @@
                             <constraint firstItem="XYT-HK-sYi" firstAttribute="centerX" secondItem="Xtc-hk-iS9" secondAttribute="centerX" id="Z63-uy-YUw"/>
                             <constraint firstItem="ARZ-0R-KjO" firstAttribute="centerX" secondItem="Xtc-hk-iS9" secondAttribute="centerX" id="c2h-ja-J2z"/>
                             <constraint firstItem="8lq-eG-npF" firstAttribute="centerX" secondItem="Xtc-hk-iS9" secondAttribute="centerX" constant="-50" id="hKy-ir-1DL"/>
+                            <constraint firstItem="5hk-ue-zDh" firstAttribute="centerX" secondItem="Xtc-hk-iS9" secondAttribute="centerX" id="ozI-rf-BT5"/>
+                            <constraint firstItem="5hk-ue-zDh" firstAttribute="centerY" secondItem="Xtc-hk-iS9" secondAttribute="centerY" constant="150" id="oze-ym-NQr"/>
                             <constraint firstItem="eX8-3O-vlD" firstAttribute="centerY" secondItem="Xtc-hk-iS9" secondAttribute="centerY" id="toT-dL-Ixu"/>
                             <constraint firstItem="8lq-eG-npF" firstAttribute="centerY" secondItem="Xtc-hk-iS9" secondAttribute="centerY" id="xiF-EH-fiv"/>
                         </constraints>

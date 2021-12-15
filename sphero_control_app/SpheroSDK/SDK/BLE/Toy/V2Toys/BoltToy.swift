@@ -96,7 +96,6 @@ class BoltToy: SpheroV2Toy {
         self.drawMatrixLine(from: Pixel(x: 3, y: 0), to: Pixel(x: 3, y: 7), color: color)
         self.drawMatrixLine(from: Pixel(x: 4, y: 0), to: Pixel(x: 4, y: 7), color: color)
         
-        
         self.drawMatrixLine(from: Pixel(x: 2, y: 6), to: Pixel(x: 2, y: 5), color: color)
         self.drawMatrixLine(from: Pixel(x: 5, y: 6), to: Pixel(x: 5, y: 5), color: color)
         self.drawMatrixLine(from: Pixel(x: 1, y: 5), to: Pixel(x: 1, y: 4), color: color)

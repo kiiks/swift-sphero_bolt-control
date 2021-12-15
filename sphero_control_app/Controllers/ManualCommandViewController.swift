@@ -79,6 +79,13 @@ class ManualCommandViewController: UIViewController {
         spheroActivityManager.executeSpheroAction(action: ESP32SpheroCommand.STOP.rawValue)
     }
     
+    @IBAction func onPressureActionBtn(_ sender: UIButton) {
+        print("manual pressure action")
+        //stopSphero()
+        spheroActivityManager.executePumpAction()
+    }
+    
+    
     @IBAction func onSegmentedControlChanged(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
         let index = sender.selectedSegmentIndex

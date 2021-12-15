@@ -10,8 +10,8 @@ import Foundation
 
 class GenericMovementManager {
     
-    var sequence:[BasicMove]
-    var stopAll:Bool = false
+    var sequence: [BasicMove]
+    var stopAll: Bool = false
     
     init(sequence:[BasicMove]) {
         self.sequence = sequence
@@ -44,13 +44,14 @@ class GenericMovementManager {
     }
     
     func playSequence() {
+        print("sequence from m-class", self.sequence)
         self.startSequence(sequence: self.sequence)
     }
     
     func startSequence(sequence:[BasicMove]) {
         
         if sequence.count == 0 || stopAll {
-            //print("Sequence finished")
+            print("Sequence finished")
         }else{
             if let move = sequence.first {
                 playMove(move: move) {

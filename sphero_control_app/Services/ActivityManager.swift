@@ -29,10 +29,13 @@ class ActivityManager {
     
     // MARK: Activity variables
     
-    var mazeLEDs = [false, false, false]
-    var desertLEDs = [false, false, false]
-    var currentPressure = 0
+    var nbMazeLEDEnbaled = 0 // Max 3
+    var nbDesertLEDEnabled = 0 // Max 3
     
+    var espPressureValue = 0 // From 0 to 800
+    var currentPressure = 0 // Percentage %
+    
+    var activitiesFinished = 0
     
     // Default activity is the maze
     private var currentActivity: Activity = Activity.LABYRINTHE
@@ -72,6 +75,9 @@ class ActivityManager {
         case .UNKNOWN:
             return
         case .LABYRINTHE:
+            if commandType == CommandType.INFO.rawValue {
+                
+            }
             if commandType == CommandType.CTRL.rawValue {
                 spheroActivityManager.executeMazeAction(action: command)
             }
@@ -81,6 +87,7 @@ class ActivityManager {
             }
             return
         case .POMPE:
+            
             return
         }
     }
