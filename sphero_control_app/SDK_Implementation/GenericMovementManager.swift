@@ -50,7 +50,7 @@ class GenericMovementManager {
     func startSequence(sequence:[BasicMove]) {
         
         if sequence.count == 0 || stopAll {
-            print("Sequence finished")
+            //print("Sequence finished")
         }else{
             if let move = sequence.first {
                 playMove(move: move) {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EBA7400275788220092662F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA73FF275788220092662F /* AppDelegate.swift */; };
 		0EBA7402275788220092662F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7401275788220092662F /* SceneDelegate.swift */; };
-		0EBA7404275788220092662F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7403275788220092662F /* ViewController.swift */; };
+		0EBA7404275788220092662F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA7403275788220092662F /* MainController.swift */; };
 		0EBA7407275788220092662F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA7405275788220092662F /* Main.storyboard */; };
 		0EBA7409275788230092662F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA7408275788230092662F /* Assets.xcassets */; };
 		0EBA740C275788230092662F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA740A275788230092662F /* LaunchScreen.storyboard */; };
@@ -59,6 +59,11 @@
 		0EBA74A02757B2BA0092662F /* CommandV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747C2757B2BA0092662F /* CommandV1.swift */; };
 		0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747D2757B2BA0092662F /* Double+Utils.swift */; };
 		0EBA74A22757B2BA0092662F /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747E2757B2BA0092662F /* String+Utils.swift */; };
+		0ED35E0727674EF8002DBF1B /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0627674EF8002DBF1B /* ActivityManager.swift */; };
+		0ED35E09276750FA002DBF1B /* SpheroActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */; };
+		0ED35E0C27689683002DBF1B /* ManualCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0B27689683002DBF1B /* ManualCommandViewController.swift */; };
+		0ED35E0F2768DC49002DBF1B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0E2768DC49002DBF1B /* Activity.swift */; };
+		0ED35E112768DC62002DBF1B /* ESP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E102768DC62002DBF1B /* ESP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +115,7 @@
 		0EBA73FC275788220092662F /* sphero_control_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sphero_control_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBA73FF275788220092662F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EBA7401275788220092662F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EBA7403275788220092662F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0EBA7403275788220092662F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		0EBA7406275788220092662F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBA7408275788230092662F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBA740B275788230092662F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -162,6 +167,11 @@
 		0EBA747C2757B2BA0092662F /* CommandV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1.swift; sourceTree = "<group>"; };
 		0EBA747D2757B2BA0092662F /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
 		0EBA747E2757B2BA0092662F /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		0ED35E0627674EF8002DBF1B /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpheroActivityManager.swift; sourceTree = "<group>"; };
+		0ED35E0B27689683002DBF1B /* ManualCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCommandViewController.swift; sourceTree = "<group>"; };
+		0ED35E0E2768DC49002DBF1B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		0ED35E102768DC62002DBF1B /* ESP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +225,8 @@
 		0EBA73FE275788220092662F /* sphero_control_app */ = {
 			isa = PBXGroup;
 			children = (
+				0ED35E0D2768DC26002DBF1B /* Types */,
+				0ED35E0A276757AB002DBF1B /* SDK_Implementation */,
 				0EBA74302757891F0092662F /* Services */,
 				0EBA742F2757890B0092662F /* Controllers */,
 				0EBA73FF275788220092662F /* AppDelegate.swift */,
@@ -248,7 +260,8 @@
 		0EBA742F2757890B0092662F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0EBA7403275788220092662F /* ViewController.swift */,
+				0EBA7403275788220092662F /* MainController.swift */,
+				0ED35E0B27689683002DBF1B /* ManualCommandViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,9 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				0EBA743E27579D320092662F /* WebSocketManager.swift */,
-				0EBA74482757AB560092662F /* SpheroMovmentManager.swift */,
-				0EBA744A2757AB950092662F /* BasicMove.swift */,
-				0EBA744C2757ABBA0092662F /* GenericMovementManager.swift */,
+				0ED35E0627674EF8002DBF1B /* ActivityManager.swift */,
+				0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +415,25 @@
 				0EBA747C2757B2BA0092662F /* CommandV1.swift */,
 			);
 			path = CommandV1;
+			sourceTree = "<group>";
+		};
+		0ED35E0A276757AB002DBF1B /* SDK_Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA74482757AB560092662F /* SpheroMovmentManager.swift */,
+				0EBA744A2757AB950092662F /* BasicMove.swift */,
+				0EBA744C2757ABBA0092662F /* GenericMovementManager.swift */,
+			);
+			path = SDK_Implementation;
+			sourceTree = "<group>";
+		};
+		0ED35E0D2768DC26002DBF1B /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				0ED35E0E2768DC49002DBF1B /* Activity.swift */,
+				0ED35E102768DC62002DBF1B /* ESP.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,12 +594,15 @@
 				0EBA74A22757B2BA0092662F /* String+Utils.swift in Sources */,
 				0EBA74992757B2BA0092662F /* SensorCommandResponseV2.swift in Sources */,
 				0EBA748C2757B2BA0092662F /* R2D2Toy.swift in Sources */,
+				0ED35E0C27689683002DBF1B /* ManualCommandViewController.swift in Sources */,
 				0EBA748B2757B2BA0092662F /* BoltToy.swift in Sources */,
 				0EBA74842757B2BA0092662F /* SensorControlV1.swift in Sources */,
-				0EBA7404275788220092662F /* ViewController.swift in Sources */,
+				0ED35E0F2768DC49002DBF1B /* Activity.swift in Sources */,
+				0EBA7404275788220092662F /* MainController.swift in Sources */,
 				0EBA74822757B2BA0092662F /* SensorControl.swift in Sources */,
 				0EBA74812757B2BA0092662F /* Toy.swift in Sources */,
 				0EBA744B2757AB950092662F /* BasicMove.swift in Sources */,
+				0ED35E112768DC62002DBF1B /* ESP.swift in Sources */,
 				0EBA74A02757B2BA0092662F /* CommandV1.swift in Sources */,
 				0EBA74492757AB560092662F /* SpheroMovmentManager.swift in Sources */,
 				0EBA747F2757B2BA0092662F /* SharedToyBox.swift in Sources */,
@@ -580,6 +614,7 @@
 				0EBA74972757B2BA0092662F /* VersionsCommandResponse.swift in Sources */,
 				0EBA748A2757B2BA0092662F /* SpheroV2Toy.swift in Sources */,
 				0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */,
+				0ED35E0727674EF8002DBF1B /* ActivityManager.swift in Sources */,
 				0EBA744D2757ABBA0092662F /* GenericMovementManager.swift in Sources */,
 				0EBA74852757B2BA0092662F /* SpheroV1Toy.swift in Sources */,
 				0EBA749D2757B2BA0092662F /* CollisionData.swift in Sources */,
@@ -600,6 +635,7 @@
 				0EBA749C2757B2BA0092662F /* PowerStateResponse.swift in Sources */,
 				0EBA74862757B2BA0092662F /* SpheroV1ToyCore.swift in Sources */,
 				0EBA744F2757AC060092662F /* Helper.swift in Sources */,
+				0ED35E09276750FA002DBF1B /* SpheroActivityManager.swift in Sources */,
 				0EBA74952757B2BA0092662F /* CommandSequencerV2.swift in Sources */,
 				0EBA74832757B2BA0092662F /* SPRKToy.swift in Sources */,
 				0EBA749F2757B2BA0092662F /* CommandV1Sequencer.swift in Sources */,
