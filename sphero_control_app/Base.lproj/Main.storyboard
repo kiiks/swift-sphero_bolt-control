@@ -80,6 +80,14 @@
                                     <segue destination="HcP-94-fvN" kind="show" id="7qm-e8-L4d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rp-JO-50W">
+                                <rect key="frame" x="176.5" y="632.5" width="61" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="onResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qmj-1P-6hf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,7 +97,9 @@
                             <constraint firstItem="0hG-cV-g15" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cBi-U8-Pde"/>
                             <constraint firstItem="1kh-Y9-gCo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccs-xn-9zE"/>
                             <constraint firstItem="Xbo-bO-U8Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="hWE-4Z-ztL"/>
+                            <constraint firstItem="1rp-JO-50W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="i38-Rh-za5"/>
                             <constraint firstItem="Xbo-bO-U8Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n6l-ei-fwG"/>
+                            <constraint firstItem="1rp-JO-50W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDa-Rc-N72"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EAZ-67-OB2"/>

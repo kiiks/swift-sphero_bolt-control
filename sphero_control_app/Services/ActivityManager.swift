@@ -21,24 +21,24 @@ class ActivityManager {
     
     private var listeners: [ActivityListener] = []
     
-    let wsURL: String = "http://192.168.4.1"
-    let wsPath: String = "/ws"
-    var wsManager: WebSocketManager = WebSocketManager.instance
+    private  let wsURL: String = "http://192.168.4.1"
+    private let wsPath: String = "/ws"
+    private var wsManager: WebSocketManager = WebSocketManager.instance
     
-    let spheroActivityManager: SpheroActivityManager = SpheroActivityManager.instance
+    private let spheroActivityManager: SpheroActivityManager = SpheroActivityManager.instance
     
     // MARK: Activity variables
     
-    var nbMazeLEDEnbaled = 0 // Max 3
-    var nbDesertLEDEnabled = 0 // Max 3
+    private var nbMazeLEDEnbaled = 0 // Max 3
+    private var nbDesertLEDEnabled = 0 // Max 3
     
-    var espPressureValue = 0 // From 0 to 800
-    var currentPressure = 0 // Percentage %
+    private var currentPressure = 0 // From 0 to 150, to determine best max value
+    private var pressureDelivered = false
     
-    var activitiesFinished = 0
+    private var activitiesFinished = 0
     
     // Default activity is the maze
-    private var currentActivity: Activity = Activity.LABYRINTHE
+    var currentActivity: Activity = Activity.LABYRINTHE
     
     // MARK: Init
     
@@ -65,6 +65,7 @@ class ActivityManager {
     
     private func didRecieve(data: String) {
         print(data)
+        if (data == "RAZ") { return }
         let components = data.components(separatedBy: "@")
         let activity = whichActivity(activityId: components[0])
         let data = components[1].components(separatedBy: ":")
@@ -75,20 +76,41 @@ class ActivityManager {
         case .UNKNOWN:
             return
         case .LABYRINTHE:
-            if commandType == CommandType.INFO.rawValue {
-                
-            }
-            if commandType == CommandType.CTRL.rawValue {
-                spheroActivityManager.executeMazeAction(action: command)
+            if currentActivity == .LABYRINTHE {
+                if commandType == CommandType.INFO.rawValue {
+                    nbMazeLEDEnbaled = Int(command) ?? nbMazeLEDEnbaled
+                    if nbMazeLEDEnbaled == 3 {
+                        activitiesFinished += 1
+                    }
+                }
+                if commandType == CommandType.CTRL.rawValue {
+                    spheroActivityManager.executeMazeAction(action: command)
+                }
             }
         case .DESERT:
+            if currentActivity == .DESERT {
+            if commandType == CommandType.INFO.rawValue {
+                nbDesertLEDEnabled = Int(command) ?? nbDesertLEDEnabled
+                if nbMazeLEDEnbaled == 3 {
+                    activitiesFinished += 1
+                }
+            }
             if commandType == CommandType.CTRL.rawValue {
                 spheroActivityManager.executeSpheroAction(action: command)
             }
-            return
+            }
         case .POMPE:
-            
-            return
+            if currentActivity == .POMPE {
+            if commandType ==  CommandType.INFO.rawValue {
+                // TODO: Determine wich value is efficient to stop pumping & simulate pressure loss
+                currentPressure = Int(command) ?? -1
+                if currentPressure >= 150 && !pressureDelivered{
+                    pressureDelivered = true
+                    activitiesFinished += 1
+                    spheroActivityManager.executePumpAction()
+                }
+            }
+            }
         }
     }
     
@@ -122,5 +144,7 @@ class ActivityManager {
     
     // MARK: -- Activity actions
     
-    
+    public func resetActivities() {
+        wsManager.send(value: "CMD@RAZ")
+    }
 }

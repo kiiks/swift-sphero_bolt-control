@@ -40,12 +40,18 @@ class WebSocketManager: WebSocketDelegate {
         self.disconnected = callback
     }
     
-    func sendOn(path:String, value:String){
-        sockets[path]?.write(string: value, completion: {
-            
+    func send(value:String){
+        if sockets.count == 0 { return }
+        
+        sockets["/ws"]?.write(string: value, completion: {
+            print("sended to ESP32 :", value)
         })
     }
-
+    
+    func reconnectToWebsocket() {
+        sockets["/ws"]?.connect()
+    }
+    
     func didReceive(event: WebSocketEvent, client: WebSocketClient) {
         switch event {
         case .connected(let headers):
@@ -71,10 +77,15 @@ class WebSocketManager: WebSocketDelegate {
         case .viabilityChanged(_):
             break
         case .reconnectSuggested(_):
+            self.reconnectToWebsocket()
             break
-        case .cancelled: break
-            
-        case .error(let error): break
+        case .cancelled:
+            print("websocket has been cancelled")
+            self.reconnectToWebsocket()
+            break
+        case .error(let error):
+            print("An error occured on websocket")
+            break
         }
     }
 }

@@ -15,15 +15,12 @@ class SpheroMovementManager: GenericMovementManager {
     
     // Executed when playSequence() is called
     override func playMove(move: BasicMove, moveDidFinish: @escaping (() -> ())) {
-        print(move.durationInSec)
         self.executeMove(move: move)
-        print(move.durationInSec)
         delay(3.0) {
             self.executeMove(move: SpheroMove(heading: move.heading, duration: 0.0, speed: 0.0))
             moveDidFinish()
         }
     }
-    
     
     func executeMove(move: BasicMove) {
         SharedToyBox.instance.boltById(id: currentSphero.rawValue)?.roll(heading: move.heading, speed: Double(move.speed))

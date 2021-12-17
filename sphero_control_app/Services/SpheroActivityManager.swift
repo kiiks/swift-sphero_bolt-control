@@ -12,24 +12,19 @@ class SpheroActivityManager {
     
     var spheroMovementManager: SpheroMovementManager? = nil
     
-    var currentActivity: Activity = Activity.LABYRINTHE
+    private var currentActivity: Activity = Activity.LABYRINTHE
     
-    let DEFAULT_DURATION: Float = 0.1
+    private var previousCommand: ESP32SpheroCommand = ESP32SpheroCommand.STOP
     
-    var mazeHeading: Double = 0.0
-    var desertHeading: Double = 0.0
-    var pumpHeading: Double = 0.0
-    var manualHeading: Double = 0.0
+    private let DEFAULT_DURATION: Float = 0.1
+    private let DEFAULT_SPEED: Float = 80.0
     
-    var sequence = [BasicMove]() {
-        didSet {
-            DispatchQueue.main.async {
-                print("from sphero manager", self.sequence)
-                self.spheroMovementManager?.playSequence()
-                //self.sequence = [BasicMove]()
-            }
-        }
-    }
+    private var mazeHeading: Double = 0.0
+    private var desertHeading: Double = 0.0
+    private var pumpHeading: Double = 0.0
+    private var manualHeading: Double = 0.0
+    
+    private var sequence = [BasicMove]()
     
     init() {
         spheroMovementManager = SpheroMovementManager(sequence: self.sequence)
@@ -70,38 +65,41 @@ class SpheroActivityManager {
         }
     }
     
-    func executeSpheroAction(action: String) {
+    // Execute sphero action like joystick control
+    func executeSpheroAction(action: String, act:Activity? = nil) {
         let command = ESP32SpheroCommand(rawValue: action)
-        
+        print(command)
         switch command {
         case .AV:
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: DEFAULT_DURATION, speed: 80.0))
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: DEFAULT_DURATION, speed: 80.0))
         case .AR:
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
         case .G:
-            mazeHeading -= 10.0
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: DEFAULT_DURATION, speed: 0.0))
+            desertHeading -= 10.0
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: DEFAULT_DURATION, speed: 0.0))
         case .D:
-            mazeHeading += 10.0
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: DEFAULT_DURATION, speed: 0.0))
+            desertHeading += 10.0
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: DEFAULT_DURATION, speed: 0.0))
         case .AVG:
-            mazeHeading -= 10
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: DEFAULT_DURATION, speed: 80.0))
+            desertHeading -= 10
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: DEFAULT_DURATION, speed: 80.0))
         case .AVD:
-            mazeHeading += 10
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: DEFAULT_DURATION, speed: 80.0))
+            desertHeading += 10
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: DEFAULT_DURATION, speed: 80.0))
         case .ARG:
-            mazeHeading += 10 // Inversing orientation since we are in rollback
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
+            desertHeading += 10 // Inversing orientation since we are in rollback
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
         case .ARD:
-            mazeHeading -= 10
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
+            desertHeading -= 10
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading - 180, duration: DEFAULT_DURATION, speed: 80.0))
         case .STOP:
-            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: 0.0, speed: 0.0))
+            self.spheroMovementManager?.executeMove(move: SpheroMove(heading: desertHeading, duration: 0.0, speed: 0.0))
             default: break
         }
     }
     
+    // Keeping heading during maze thus the user don't has to recalibrate the sphero during activity.
+    // Left and right action are working like rollback
     func executeMazeAction(action: String) {
         let command = ESP32SpheroCommand(rawValue: action)
         
@@ -126,15 +124,15 @@ class SpheroActivityManager {
             self.spheroMovementManager?.executeMove(move: SpheroMove(heading: mazeHeading, duration: 0.0, speed: 0.0))
             default: break
         }
+        previousCommand = command!
     }
     
+    // Apply force to sphero from begining of the pump corridor to the end
     func executePumpAction() {
-        //SharedToyBox.instance.bolt?.roll(heading: pumpHeading, speed: 80)
-        SharedToyBox.instance.boltById(id: ActivitySphero.LABYRINTHE.rawValue)?.roll(heading: pumpHeading, speed: 80)
+        SharedToyBox.instance.boltById(id: ActivitySphero.POMPE.rawValue)?.roll(heading: pumpHeading, speed: 80)
         
         delay(1.8) {
-            print("Stopped")
-            SharedToyBox.instance.boltById(id: ActivitySphero.LABYRINTHE.rawValue)?.roll(heading: self.pumpHeading, speed: 0)
+            SharedToyBox.instance.boltById(id: ActivitySphero.POMPE.rawValue)?.roll(heading: self.pumpHeading, speed: 0)
         }
     }
 }

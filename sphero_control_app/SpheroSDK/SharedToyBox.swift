@@ -75,7 +75,16 @@ extension SharedToyBox:ToyBoxListener{
                 item.identifier == b.identifier
             }){
                 self.bolts[i] = b
-                b.setupLEDArrow(color: UIColor.blue)
+                switch b.peripheral?.name {
+                case ActivitySphero.LABYRINTHE.rawValue:
+                    b.setupLEDArrow(color: UIColor.orange)
+                case ActivitySphero.DESERT.rawValue:
+                    b.setupLEDArrow(color: UIColor.blue)
+                case ActivitySphero.POMPE.rawValue:
+                    b.setupLEDArrow(color: UIColor.red)
+                default:
+                    return
+                }
             }
             
             if bolts.count >= boltsNames.count {

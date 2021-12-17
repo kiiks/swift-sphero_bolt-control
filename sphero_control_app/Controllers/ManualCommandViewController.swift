@@ -25,7 +25,7 @@ class ManualCommandViewController: UIViewController {
     
     @IBAction func onRightBtnHold(_ sender: UIButton) {
         print("right button hold")
-        spheroActivityManager.executeSpheroAction(action: ESP32SpheroCommand.D.rawValue)
+        spheroActivityManager.executeSpheroAction(action: ESP32SpheroCommand.D.rawValue,act: currentActivity)
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(onRightBtnHold(_:)), userInfo: nil, repeats: false)
     }
     
@@ -37,7 +37,7 @@ class ManualCommandViewController: UIViewController {
     
     @IBAction func onLeftBtnHold(_ sender: UIButton) {
         print("left button hold")
-        spheroActivityManager.executeSpheroAction(action: ESP32SpheroCommand.G.rawValue)
+        spheroActivityManager.executeSpheroAction(action: ESP32SpheroCommand.G.rawValue,act: currentActivity)
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(onLeftBtnHold(_:)), userInfo: nil, repeats: false)
     }
     
@@ -94,14 +94,18 @@ class ManualCommandViewController: UIViewController {
             let activity = Activity.LABYRINTHE
             currentActivity = activity
             spheroActivityManager.switchActivitySphero(activity: activity)
+            ActivityManager.instance.currentActivity = activity
+            
         case 1:
             let activity = Activity.DESERT
             currentActivity = activity
             spheroActivityManager.switchActivitySphero(activity: activity)
+            ActivityManager.instance.currentActivity = activity
         case 2:
             let activity = Activity.POMPE
             currentActivity = activity
             spheroActivityManager.switchActivitySphero(activity: activity)
+            ActivityManager.instance.currentActivity = activity
         default:
             return
         }

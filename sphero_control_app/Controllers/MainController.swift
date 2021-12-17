@@ -45,4 +45,7 @@ class MainController: UIViewController, ActivityListener {
         self.spheroStateLabel.text = "[Disconnected]"
     }
     
+    @IBAction func onResetBtn(_ sender: UIButton) {
+        activityManager.resetActivities()
+    }
 }
