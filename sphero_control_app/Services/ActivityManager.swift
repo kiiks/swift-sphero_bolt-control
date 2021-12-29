@@ -40,9 +40,7 @@ class ActivityManager {
     // Default activity is the maze
     var currentActivity: Activity = Activity.MAZE
     
-    // MARK: Init
-    
-    init() {
+    func initWS() {
         wsManager.addSocket(url: wsURL, path: wsPath)
         wsManager.didConnect(callback: self.connected)
         wsManager.didDisconnect(callback: self.disconnected)

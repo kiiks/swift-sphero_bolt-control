@@ -27,6 +27,11 @@ class MainController: UIViewController, ActivityListener {
         activityManager.connectToSpheros()
     }
     
+    @IBAction func connectionToWS(_ sender: UIButton) {
+        activityManager.initWS()
+    }
+    
+    
     // MARK: -- Connection callbacks
     
     func connectedToESP32() {

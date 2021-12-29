@@ -28,6 +28,10 @@ class WebSocketManager: WebSocketDelegate {
         sockets[path] = socket
     }
     
+    func disconnect() {
+        sockets["/ws"]?.disconnect();
+    }
+    
     func didReceivedData(callback:@escaping (String)->()) {
         self.receivedData = callback
     }
@@ -77,14 +81,16 @@ class WebSocketManager: WebSocketDelegate {
         case .viabilityChanged(_):
             break
         case .reconnectSuggested(_):
+            self.disconnect()
             self.reconnectToWebsocket()
             break
         case .cancelled:
             print("websocket has been cancelled")
+            self.disconnect()
             self.reconnectToWebsocket()
             break
         case .error(let error):
-            print("An error occured on websocket")
+            print("An error occured on websocket, error :", error?.localizedDescription ?? "")
             break
         }
     }

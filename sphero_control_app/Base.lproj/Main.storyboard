@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJQ-47-S2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJQ-47-S2l">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -35,20 +35,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-cV-g15">
-                                <rect key="frame" x="146.5" y="423.5" width="121" height="49"/>
+                                <rect key="frame" x="125" y="413.5" width="164.5" height="69.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFt-KZ-NhD">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sphero State (BLE) :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-p0-5be">
+                                        <rect key="frame" x="0.0" y="0.0" width="164.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SG-KY-Dfh">
+                                        <rect key="frame" x="0.0" y="20.5" width="164.5" height="28.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Connect Sphero">
+                                        <buttonConfiguration key="configuration" style="filled" title="Connect spheros">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="connectionToSphero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="021-C7-TVa"/>
+                                            <action selector="connectionToSphero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6J-Zy-SjE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Disconnected]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-66-u8e">
-                                        <rect key="frame" x="0.0" y="28.5" width="121" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="49" width="164.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,7 +62,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1kh-Y9-gCo">
-                                <rect key="frame" x="127" y="327.5" width="160.5" height="41"/>
+                                <rect key="frame" x="127" y="313.5" width="160.5" height="69.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESP32 State (Wifi) :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-bh-9m0">
                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="20.5"/>
@@ -64,8 +70,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a1-JD-FXI">
+                                        <rect key="frame" x="0.0" y="20.5" width="160.5" height="28.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Connect WS">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="connectionToWS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7B-Ec-QWJ"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Disconnected]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-O8-CDK">
-                                        <rect key="frame" x="0.0" y="20.5" width="160.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="49" width="160.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -88,6 +104,17 @@
                                     <action selector="onResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qmj-1P-6hf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anp-82-EMU">
+                                <rect key="frame" x="154" y="534" width="106" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Connect both">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="connectionToSphero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkM-Jh-kTM"/>
+                                    <action selector="connectionToWS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzd-7j-Zv1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -96,10 +123,12 @@
                             <constraint firstItem="1kh-Y9-gCo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="bfo-st-9Er"/>
                             <constraint firstItem="0hG-cV-g15" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cBi-U8-Pde"/>
                             <constraint firstItem="1kh-Y9-gCo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccs-xn-9zE"/>
+                            <constraint firstItem="anp-82-EMU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="df9-vI-IZX"/>
                             <constraint firstItem="Xbo-bO-U8Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="hWE-4Z-ztL"/>
                             <constraint firstItem="1rp-JO-50W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="i38-Rh-za5"/>
                             <constraint firstItem="Xbo-bO-U8Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n6l-ei-fwG"/>
                             <constraint firstItem="1rp-JO-50W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDa-Rc-N72"/>
+                            <constraint firstItem="anp-82-EMU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wFs-MX-h1w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EAZ-67-OB2"/>
