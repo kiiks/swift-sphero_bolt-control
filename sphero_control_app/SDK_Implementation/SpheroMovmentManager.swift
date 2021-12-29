@@ -11,7 +11,7 @@ import Foundation
 
 class SpheroMovementManager: GenericMovementManager {
     
-    var currentSphero: ActivitySphero = ActivitySphero.LABYRINTHE
+    var currentSphero: SpheroID = SpheroID.MAZE
     
     // Executed when playSequence() is called
     override func playMove(move: BasicMove, moveDidFinish: @escaping (() -> ())) {
@@ -26,7 +26,7 @@ class SpheroMovementManager: GenericMovementManager {
         SharedToyBox.instance.boltById(id: currentSphero.rawValue)?.roll(heading: move.heading, speed: Double(move.speed))
     }
     
-    func switchTo(sphero: ActivitySphero) {
+    func switchTo(sphero: SpheroID) {
         currentSphero = sphero
     }
 }

@@ -76,11 +76,11 @@ extension SharedToyBox:ToyBoxListener{
             }){
                 self.bolts[i] = b
                 switch b.peripheral?.name {
-                case ActivitySphero.LABYRINTHE.rawValue:
+                case SpheroID.MAZE.rawValue:
                     b.setupLEDArrow(color: UIColor.orange)
-                case ActivitySphero.DESERT.rawValue:
+                case SpheroID.DESERT.rawValue:
                     b.setupLEDArrow(color: UIColor.blue)
-                case ActivitySphero.POMPE.rawValue:
+                case SpheroID.PUMP.rawValue:
                     b.setupLEDArrow(color: UIColor.red)
                 default:
                     return

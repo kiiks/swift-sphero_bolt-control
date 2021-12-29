@@ -25,20 +25,20 @@ class ActivityManager {
     private let wsPath: String = "/ws"
     private var wsManager: WebSocketManager = WebSocketManager.instance
     
-    private let spheroActivityManager: SpheroActivityManager = SpheroActivityManager.instance
+    private let spheroManager: SpheroManager = SpheroManager.instance
     
     // MARK: Activity variables
     
     private var nbMazeLEDEnbaled = 0 // Max 3
     private var nbDesertLEDEnabled = 0 // Max 3
     
-    private var currentPressure = 0 // From 0 to 150, to determine best max value
+    private var currentPressure = 0 // From 0 to 150
     private var pressureDelivered = false
     
     private var activitiesFinished = 0
     
     // Default activity is the maze
-    var currentActivity: Activity = Activity.LABYRINTHE
+    var currentActivity: Activity = Activity.MAZE
     
     // MARK: Init
     
@@ -73,10 +73,8 @@ class ActivityManager {
         let command = data[1]
         
         switch activity {
-        case .UNKNOWN:
-            return
-        case .LABYRINTHE:
-            if currentActivity == .LABYRINTHE {
+        case .MAZE:
+            if currentActivity == .MAZE {
                 if commandType == CommandType.INFO.rawValue {
                     nbMazeLEDEnbaled = Int(command) ?? nbMazeLEDEnbaled
                     if nbMazeLEDEnbaled == 3 {
@@ -84,7 +82,7 @@ class ActivityManager {
                     }
                 }
                 if commandType == CommandType.CTRL.rawValue {
-                    spheroActivityManager.executeMazeAction(action: command)
+                    spheroManager.executeMazeAction(action: command)
                 }
             }
         case .DESERT:
@@ -96,18 +94,18 @@ class ActivityManager {
                 }
             }
             if commandType == CommandType.CTRL.rawValue {
-                spheroActivityManager.executeSpheroAction(action: command)
+                spheroManager.executeSpheroAction(action: command)
             }
             }
-        case .POMPE:
-            if currentActivity == .POMPE {
+        case .PUMP:
+            if currentActivity == .PUMP {
             if commandType ==  CommandType.INFO.rawValue {
                 // TODO: Determine wich value is efficient to stop pumping & simulate pressure loss
                 currentPressure = Int(command) ?? -1
                 if currentPressure >= 150 && !pressureDelivered{
                     pressureDelivered = true
                     activitiesFinished += 1
-                    spheroActivityManager.executePumpAction()
+                    spheroManager.executePumpAction()
                 }
             }
             }
@@ -117,7 +115,7 @@ class ActivityManager {
     // MARK: -- Sphero connection
     
     public func connectToSpheros() {
-        spheroActivityManager.connectToActivitySpheros(connected: {
+        spheroManager.connectToActivitySpheros(connected: {
             for listener in self.listeners {
                 listener.connectedToSphero()
             }
@@ -137,9 +135,8 @@ class ActivityManager {
     public func whichActivity(activityId: String) -> Activity {
         if let activity = Activity(rawValue: activityId) {
             return activity
-        } else {
-            return Activity.UNKNOWN
         }
+        return Activity.MAZE
     }
     
     // MARK: -- Activity actions

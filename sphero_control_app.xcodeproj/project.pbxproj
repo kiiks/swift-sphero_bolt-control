@@ -60,10 +60,11 @@
 		0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747D2757B2BA0092662F /* Double+Utils.swift */; };
 		0EBA74A22757B2BA0092662F /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA747E2757B2BA0092662F /* String+Utils.swift */; };
 		0ED35E0727674EF8002DBF1B /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0627674EF8002DBF1B /* ActivityManager.swift */; };
-		0ED35E09276750FA002DBF1B /* SpheroActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */; };
+		0ED35E09276750FA002DBF1B /* SpheroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E08276750FA002DBF1B /* SpheroManager.swift */; };
 		0ED35E0C27689683002DBF1B /* ManualCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0B27689683002DBF1B /* ManualCommandViewController.swift */; };
 		0ED35E0F2768DC49002DBF1B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E0E2768DC49002DBF1B /* Activity.swift */; };
 		0ED35E112768DC62002DBF1B /* ESP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35E102768DC62002DBF1B /* ESP.swift */; };
+		0ED466DB276CC74300899F3E /* SpheroActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED466DA276CC74300899F3E /* SpheroActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,10 +169,11 @@
 		0EBA747D2757B2BA0092662F /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
 		0EBA747E2757B2BA0092662F /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		0ED35E0627674EF8002DBF1B /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
-		0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpheroActivityManager.swift; sourceTree = "<group>"; };
+		0ED35E08276750FA002DBF1B /* SpheroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpheroManager.swift; sourceTree = "<group>"; };
 		0ED35E0B27689683002DBF1B /* ManualCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCommandViewController.swift; sourceTree = "<group>"; };
 		0ED35E0E2768DC49002DBF1B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0ED35E102768DC62002DBF1B /* ESP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESP.swift; sourceTree = "<group>"; };
+		0ED466DA276CC74300899F3E /* SpheroActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpheroActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +273,7 @@
 			children = (
 				0EBA743E27579D320092662F /* WebSocketManager.swift */,
 				0ED35E0627674EF8002DBF1B /* ActivityManager.swift */,
-				0ED35E08276750FA002DBF1B /* SpheroActivityManager.swift */,
+				0ED35E08276750FA002DBF1B /* SpheroManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -432,6 +434,7 @@
 			children = (
 				0ED35E0E2768DC49002DBF1B /* Activity.swift */,
 				0ED35E102768DC62002DBF1B /* ESP.swift */,
+				0ED466DA276CC74300899F3E /* SpheroActivity.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				0EBA74972757B2BA0092662F /* VersionsCommandResponse.swift in Sources */,
 				0EBA748A2757B2BA0092662F /* SpheroV2Toy.swift in Sources */,
 				0EBA74A12757B2BA0092662F /* Double+Utils.swift in Sources */,
+				0ED466DB276CC74300899F3E /* SpheroActivity.swift in Sources */,
 				0ED35E0727674EF8002DBF1B /* ActivityManager.swift in Sources */,
 				0EBA744D2757ABBA0092662F /* GenericMovementManager.swift in Sources */,
 				0EBA74852757B2BA0092662F /* SpheroV1Toy.swift in Sources */,
@@ -635,7 +639,7 @@
 				0EBA749C2757B2BA0092662F /* PowerStateResponse.swift in Sources */,
 				0EBA74862757B2BA0092662F /* SpheroV1ToyCore.swift in Sources */,
 				0EBA744F2757AC060092662F /* Helper.swift in Sources */,
-				0ED35E09276750FA002DBF1B /* SpheroActivityManager.swift in Sources */,
+				0ED35E09276750FA002DBF1B /* SpheroManager.swift in Sources */,
 				0EBA74952757B2BA0092662F /* CommandSequencerV2.swift in Sources */,
 				0EBA74832757B2BA0092662F /* SPRKToy.swift in Sources */,
 				0EBA749F2757B2BA0092662F /* CommandV1Sequencer.swift in Sources */,

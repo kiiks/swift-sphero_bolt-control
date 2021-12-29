@@ -8,14 +8,13 @@
 import Foundation
 
 enum Activity: String {
-    case UNKNOWN = "UNKNOWN"
-    case LABYRINTHE = "LBR"
+    case MAZE = "LBR"
     case DESERT = "DRT"
-    case POMPE = "PMP"
+    case PUMP = "PMP"
 }
 
-enum ActivitySphero: String {
-    case LABYRINTHE = "SB-2020"
+enum SpheroID: String {
+    case MAZE = "SB-2020"
     case DESERT = "SB-0994"
-    case POMPE = "SB-42C1"
+    case PUMP = "SB-42C1"
 }
