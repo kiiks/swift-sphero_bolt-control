@@ -92,7 +92,7 @@ class ActivityManager {
                 }
             }
             if commandType == CommandType.CTRL.rawValue {
-                spheroManager.executeSpheroAction(action: command)
+                spheroManager.executeMazeAction(action: command)
             }
             }
         case .PUMP:

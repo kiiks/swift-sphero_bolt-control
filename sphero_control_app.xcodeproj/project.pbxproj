@@ -826,6 +826,7 @@
 				DEVELOPMENT_TEAM = TYT8SVZSUY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sphero_control_app/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Déplacement des Sphero Bolt";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -837,7 +838,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-application";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -857,6 +858,7 @@
 				DEVELOPMENT_TEAM = TYT8SVZSUY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sphero_control_app/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Déplacement des Sphero Bolt";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -868,7 +870,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "kiiks.drone.sphero-control-application";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

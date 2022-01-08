@@ -82,7 +82,7 @@ class SpheroManager {
     // Keeping heading during maze thus the user don't has to recalibrate the sphero during activity.
     // Left and right action are working like rollback
     func executeMazeAction(action: String) {
-        if currentActivity != .MAZE { return }
+        //if currentActivity != .MAZE { return }
         let command = ESP32SpheroCommand(rawValue: action)
         let sphero = spheroFromCurrentActivity()
         let heading = sphero.heading
