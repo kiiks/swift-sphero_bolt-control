@@ -87,7 +87,7 @@ class SpheroManager {
         let sphero = spheroFromCurrentActivity()
         let heading = sphero.heading
         let duration = Float(sphero.DEFAULT_DURATION)
-        let speed = Float(sphero.DEFAULT_SPEED)
+        let speed = Float(currentActivity == .MAZE ? 110 : sphero.DEFAULT_SPEED)
         
         switch command {
         case .AV:
